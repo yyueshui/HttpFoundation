@@ -11,7 +11,11 @@ class NewsletterManager
 {
 	private $mailer;
 
-	public function __construct(\Felix\DependencyInjection\Mailer $mailer)
+	public function __construct()
+	{
+	}
+
+	public function setMailer(\Felix\DependencyInjection\Mailer $mailer)
 	{
 		$this->mailer = $mailer;
 	}

@@ -1,0 +1,11 @@
+parameters:
+    mailer.transport: sendMail
+
+services:
+    Mailer:
+        class: \Felix\DependencyInjection\Mailer
+        arguments: ['%mailer.transport%']
+    NewsletterManager:
+        class: \Felix\DependencyInjection\NewsletterManager
+        calls:
+            - [setMailer, ['@Mailer']]
