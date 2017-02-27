@@ -5,7 +5,7 @@
  * Date: 2017/2/27
  * Time: 上午11:29
  */
-namespace Felix\Tools;
+namespace Felix\DependencyInjection;
 
 class Mailer
 {

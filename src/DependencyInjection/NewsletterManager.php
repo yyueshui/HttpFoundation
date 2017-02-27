@@ -5,13 +5,13 @@
  * Date: 2017/2/27
  * Time: 下午2:39
  */
-namespace Felix;
+namespace Felix\DependencyInjection;
 
 class NewsletterManager
 {
 	private $mailer;
 
-	public function __construct(\Felix\Tools\Mailer $mailer)
+	public function __construct(\Felix\DependencyInjection\Mailer $mailer)
 	{
 		$this->mailer = $mailer;
 	}
