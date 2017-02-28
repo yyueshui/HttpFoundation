@@ -4,8 +4,10 @@ parameters:
 services:
     Mailer:
         class: \Felix\DependencyInjection\Mailer
+        lazy: true #懒加载依赖symfony/proxy-manager-bridge组件
         arguments: ['%mailer.transport%']
     NewsletterManager:
         class: \Felix\DependencyInjection\NewsletterManager
+        lazy: true #懒加载依赖symfony/proxy-manager-bridge组件
         calls:
             - [setMailer, ['@Mailer']]

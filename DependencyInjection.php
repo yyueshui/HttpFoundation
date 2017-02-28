@@ -29,3 +29,5 @@ $container = new ContainerBuilder();
 $loader = new YamlFileLoader($container, new FileLocator(__DIR__.'/src/DependencyInjection'));
 $loader->load('config.yml');
 $container->get('NewsletterManager')->getMailer()->process();
+echo '<pre>';
+var_dump($container->get('NewsletterManager'));
