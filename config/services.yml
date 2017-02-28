@@ -1,0 +1,4 @@
+#使用imports导入配置
+imports:
+    - { resource:  DependencyInjection/config.yml } #resource键对应的位置，对于文件来说，既可以是相对于当前文件的路径，也可以是绝对路径。
+

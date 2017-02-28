@@ -26,8 +26,8 @@ use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
 use Symfony\Component\Config\FileLocator;
 
 $container = new ContainerBuilder();
-$loader = new YamlFileLoader($container, new FileLocator(__DIR__.'/src/DependencyInjection'));
-$loader->load('config.yml');
+$loader = new YamlFileLoader($container, new FileLocator(__DIR__.'/config'));
+$loader->load('services.yml');
 $container->get('NewsletterManager')->getMailer()->process();
-echo '<pre>';
-var_dump($container->get('NewsletterManager'));
+//echo '<pre>';
+//var_dump($container->get('NewsletterManager'));
